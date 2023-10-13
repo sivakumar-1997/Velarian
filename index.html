@@ -19,6 +19,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 </script>
 <body>
+    <script>
+        // Add a # to the homepage URL
+        if (window.location.pathname === '/' && window.location.hash === '') {
+            window.location.hash = '#';
+        }
+    </script>
+
     <h1><a href="#">Section 1</a></h1>
     <div id="section1">
         <h2>Section 1 Content</h2>
